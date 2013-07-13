@@ -10,7 +10,7 @@ app.get('/', function(request, response) {
  
   fs.readFile('index.html', function (err, data) {
     if (err) throw err;
-    buf.write(data,"utf-8");
+    response.write(data);   
   });
 
   //response.send('Hello World 2!');
